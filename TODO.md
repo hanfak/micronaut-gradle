@@ -1,4 +1,9 @@
 - Run tests using gradle
 - dependency management
+- module
+- create a jar
 - separate libraries for use in 
-- Create folder with four modules
+- Add micronaut
+    - test profile for DI
+- clean architecture
+- end to end test

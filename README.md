@@ -1,1 +1,2 @@
 - pref->build->gradle set build-and-run and run tests using to idea, set gradle jvm to one that matches in the build file
+- Issues setting gradle jvm to jdk11, needs to stay on jdk8, this is a gradle version issue
