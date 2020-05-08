@@ -1,0 +1,4 @@
+- Run tests using gradle
+- dependency management
+- separate libraries for use in 
+- Create folder with four modules

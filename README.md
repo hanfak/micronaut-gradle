@@ -1,0 +1,1 @@
+- pref->build->gradle set build-and-run and run tests using to idea, set gradle jvm to one that matches in the build file
