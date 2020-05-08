@@ -7,3 +7,4 @@
     - test profile for DI
 - clean architecture
 - end to end test
+- implement yatspec
