@@ -3,6 +3,9 @@
 - module
 - create a jar
 - separate libraries for use in 
+- use mongo db
+- use settings
+- use client
 - Add micronaut
     - test profile for DI
 - clean architecture
