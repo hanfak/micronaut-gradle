@@ -1,4 +1,4 @@
-package com.hanfak.controller;
+package com.hanfak.entrypoint.rest;
 
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;

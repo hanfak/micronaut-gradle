@@ -1,4 +1,4 @@
-package com.hanfak;
+package com.hanfak.configuration;
 
 import io.micronaut.runtime.Micronaut;
 
