@@ -1,2 +1,9 @@
 - pref->build->gradle set build-and-run and run tests using to idea, set gradle jvm to one that matches in the build file
 - Issues setting gradle jvm to jdk11, needs to stay on jdk8, this is a gradle version issue
+- NEed to set annotation processor on in intellij
+- There is a issue with  with run app via gradle (page not found), or running gradle build (does not pass test)
+- Use shadowjar, to create fat jar
+    - location /build/libs
+    - Issues
+        - main is run, but endpoint (/usecase) is defined but page not found is returned. 
+            - This doesnt happen ran main method is run through intelllij

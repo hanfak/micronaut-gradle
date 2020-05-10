@@ -1,19 +1,49 @@
 import infrastructure.MicronautLibs
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
 
 plugins {
     `micronaut-demo-module`
     id("net.ltgt.apt-eclipse") version "0.21"
+    id("com.github.johnrengelman.shadow") version "5.2.0"
     id("application")
+}
+
+val developmentOnly = configurations.create("developmentOnly")
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom(developmentOnly)
+    }
+    compileOnly {
+        extendsFrom(configurations.annotationProcessor.get())
+    }
+}
+
+application {
+    mainClassName = "com.hanfak.configuration.Application"
 }
 
 tasks {
     withType<JavaExec> {
+        classpath += developmentOnly
         jvmArgs("-noverify", "-XX:TieredStopAtLevel=1", "-Dcom.sun.management.jmxremote")
     }
 
     withType<JavaCompile> {
         options.encoding = "UTF-8"
         options.compilerArgs.add("-parameters")
+    }
+
+    withType<ShadowJar>() {
+        // May not be necessary
+//        manifest {
+//            attributes["Main-Class"] = "com.hanfak.configuration.Application"
+//        }
+        mergeServiceFiles()
+
+        // May not be necessary
+//        archiveClassifier.set("")
     }
 }
 
